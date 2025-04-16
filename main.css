@@ -1,0 +1,75 @@
+/* General stylistic rules*/
+
+html {
+    background-image: url(Images/grunge_bg.png);
+    font-family: sans-serif;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section, aside, nav {
+    background-color: #fdfdfd;
+}
+
+@font-face {
+    font-family: "Bebas-Neue";
+    src: url("Fonts/BebasNeue-Regular.ttf");
+}
+
+h1, h2 {
+    font-family: "Bebas-Neue";
+    letter-spacing: 2px;
+    margin-top: 2vh;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;    
+}
+
+nav a:not(.logo) {
+    width: auto;
+    font-size: 2vw;
+    background-color: #cfcfcf;
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 1.5vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+}
+
+nav h1 {
+        font-size: max(2.75vw, 20px);
+        max-width: 13vw;
+        text-align: center;
+        height: auto;
+        width: auto;
+        padding: 1%;
+        margin-top: 0px;
+    }
+
+nav a:hover:not(.logo) {
+    background-image: url(Images/button_overlay.png);
+}
+
+p {
+    line-height: 40px;
+}
+
+ul {
+    line-height: 150%;
+}
+
+#sub {
+    font-weight: bold;
+    margin-top: 1%;
+}
+
+#main {
+    font-weight: bold;
+    margin-top: 2%;
+}
+
