@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home - Becoming Cultured</title>
+        <meta name="description" content="A personal website about Julia Potter.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="blog.css">
+        
+        <!-- This code taken from https://favicon.io/favicon-converter/ -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../Icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../Icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../Icons/favicon-16x16.png">
+        <!-- End taken code -->
+        
+        <style>
+    @media only screen and (max-width: 600px) {
+    
+    h1 {
+        font-size: max(18px, 8vw); 
+        text-align: center;
+    }
+
+    h2 {
+        font-size: max(18px, 8vw);
+    }
+        
+        h3, #main {
+            font-size: max(16px, 6vw);
+        }
+
+    p {
+        font-size: max(14px, 4vw);
+        margin: 5%;
+    }
+        
+        ul {
+           font-size: max(14px, 4vw); 
+            margin-right: 5%;
+        }
+    
+    #grid {
+        display: grid;
+        width: 90vw;
+        height: 98vh;
+        margin: auto;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        padding: 0px;
+        grid-template: 10% auto/100%;
+        grid-template-areas: 
+            "header"
+            "body"
+    }
+    
+            header {
+                background-color: #fdfdfd;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                grid-area: header;
+                justify-content: center;
+                align-items: center;
+                border: 4px solid #5c3e2c;
+            }
+            
+            header h1 {
+                width: 50%;
+                margin-top: 0px;
+            }
+        
+    section {
+        border: 4px solid #5c3e2c;
+        width: 100%;
+        height: 95%;
+        margin: auto;
+        margin-top: 5%;
+        grid-area: body;
+        padding-bottom: 5%;
+    }
+        
+        section h2 {
+            margin: 0px;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            text-align: center;
+        }
+        
+        #no-mobile {
+            display: none;
+        }
+        
+        article h3 {
+            margin-left: 5%;
+        }
+        
+        article p {
+            margin-top: 3%;
+        }
+        
+        hr {
+            margin: 5%;
+        }
+        
+        /* Taken From https://www.w3schools.com/css/css_dropdowns.asp */
+            
+            /* Style The Dropdown Button */
+            .dropbtn {
+                background-image: url(../Placeholders/placeholder-menu-icon.png);
+                background-color: transparent;
+                background-size: cover;
+                border: none;
+                width: 12vw;
+                height: 12vw;
+                position: absolute;
+                left: 8vw;
+                top: 3vh;
+              cursor: pointer;
+            }
+
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content {
+              display: none;
+              position: absolute;
+                left: 8vw;
+                top: 8vh;
+              background-color: #f9f9f9;
+              min-width: 160px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+            }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+            }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {background-color: #f1f1f1}
+
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+              display: block;
+            }
+}
+            
+    @media only screen and (min-width: 600px) {
+        h1 {
+            font-size: max(4vw, 20px);
+        }
+        
+        h2 {
+            font-size: max(3vw, 18px);
+            margin: 3%;
+            margin-bottom: 2%;
+            margin-left: 2%;
+                }
+        h3 {
+          font-size: max(2vw, 18px);  
+        }
+        
+        #main {
+            font-size: max(1.5vw, 16px);
+        }
+    
+                p {
+                    margin: 3%;
+                    font-size: max(1.25vw, 12px);
+                }
+                
+        ul, li {
+            font-size: max(1.5vw, 14px);
+            margin: .5%;
+        }
+
+        #grid {
+            display: grid;
+            width: 90vw;
+            height: auto;
+            margin: auto;
+            margin-top: 1vh;
+            margin-bottom: 1vh;
+            padding: 0px;
+            grid-template: 17vh auto/100%;
+            grid-template-areas: 
+                "header"
+                "body"
+    }
+            header {
+                background-color: #fdfdfd;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                grid-area: header;
+                justify-content: center;
+                align-items: center;
+                border: 4px solid black;
+            }
+        
+        header h1 {
+            
+        }
+
+        #socials {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 5%;
+                padding-right: 5%;
+                width: 100%;
+                height: 100%;
+                border: 4px solid black;
+                grid-area: socials;
+            }
+        #socials a {
+                width: auto;
+                height: 75%;
+            }
+            
+            #socials img {
+                height: 100%;
+                width: 100%;
+            }
+        nav {
+            grid-area: nav;
+            width: 100%;
+            height: 15vh;
+            margin: auto;
+            margin-top: 1vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 7vw;
+            padding-left: 3vw;
+            border: 3px solid black;
+    }
+        section {
+            border: 4px solid black;
+            width: 100%;
+            height: auto;
+            margin-top: .5vw;
+            margin-bottom: 1vw;
+            grid-area: body;
+            padding-bottom: 1vw;
+            padding-right: 10%;
+    }
+        
+        #no-mobile {
+            display: inline;
+        }
+        
+        article h3 {
+            margin-left: 3%;
+        }
+        
+        article p {
+            margin-top: 1%;
+        }
+        
+        hr {
+            margin: 3%;
+        }
+        
+        /* Taken From https://www.w3schools.com/css/css_dropdowns.asp */
+            
+            /* Style The Dropdown Button */
+            .dropbtn {
+                background-image: url(../Placeholders/placeholder-menu-icon.png);
+                background-color: transparent;
+                background-size: cover;
+                border: none;
+                width: 6vw;
+                height: 6vw;
+                position: absolute;
+                left: 6vw;
+                top: 3vh;
+              cursor: pointer;
+            }
+
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content {
+              display: none;
+              position: absolute;
+                left: 6vw;
+                top: 15vh;
+              background-color: #f9f9f9;
+              min-width: 160px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+            }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+            }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {background-color: #f1f1f1}
+
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+              display: block;
+            }
+        
+    }
+        </style>
+    </head>
+    <body>
+        <div id="grid">
+            <header>
+                <div class="dropdown">
+                    <button class="dropbtn"></button>
+                    <div class="dropdown-content">
+                        <a href="blog.html">Home</a>
+                        <a href="../index.html">Back to Personal Site</a>
+                    </div>
+                </div>
+                <h1><a href="blog.html" style="text-decoration: none; color: black;">Becoming Cultured</a></h1>
+            </header>
+            
+            <section>
+                <h2>Featured Review<div id="no-mobile">(s)</div></h2>
+                    <article id="featured">
+                        <h3><a href="Articles/crime-and-punishment.html">Crime and Punishment</a></h3>
+                        <p>Crime and Punishment is a novel published in 1866 by Russian author Fyodor Dostoyevsky. It follows the story of Rodion Raskolnikov, a troubled former law student at his all-time low. To free himself from poverty, he decides to murder an old pawnbroker and steal all her money and valuables. The novel centers around...</p>
+                    </article>
+                <hr>
+                <h2>All Reviews</h2>
+                    <ul>
+                        <li><a href="Articles/crime-and-punishment.html">Crime and Punishment</a></li>
+                    </ul>
+                <hr>
+                <h2>My Mission</h2>
+                    <p>My name is Julia, and reading is one of my greatest passions. I've loved to read ever since I was three years old; literature is a staple of my life. However, I've recently become disillusioned with the state of modern fiction. In my opinion, there are so many novels being published nowadays that one must dig through piles of mediocrity to find worthwhile literature. Personally, I have not found a genuinely amazing, recently published piece of fiction in several years. At this point, I'm no longer interested in trying.</p>
+                    <p>With no stock in the present and little hope for the future, there's only one place to go- the past. So, I've decided to embark on a journey to read as many classic literature novels as possible and document my progress by writing reviews for each book I read.</p>
+                    <p>It is my mission to become a cultured reader. Won't you come along for the ride?</p>
+            </section>
+        </div>
+    </body>
+</html>
