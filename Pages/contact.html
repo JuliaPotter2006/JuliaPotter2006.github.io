@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Skills - Julia Potter</title>
+        <title>Contact - Julia Potter</title>
         <meta name="description" content="A personal website about Julia Potter.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../main.css">
@@ -33,6 +33,9 @@
         font-size: max(14px, 4vw);
         margin: 5%;
     }
+        label {
+            font-size: max(14px, 4vw);
+        }
         
         ul {
            font-size: max(14px, 4vw); 
@@ -111,6 +114,10 @@
             margin-bottom: 3%;
             text-align: center;
         }
+        
+        form {
+            width: 90%;
+        }
     
     /* Taken From https://www.w3schools.com/css/css_dropdowns.asp */
             
@@ -171,6 +178,9 @@
                     margin: 5%;
                     font-size: max(1.25vw, 12px);
                 }
+        label {
+            font-size: max(1.25vw, 12px);
+        }
                 
         ul, li {
             font-size: max(1.25vw, 12px);
@@ -274,29 +284,31 @@
             </nav>
             
             <section>
-                <h2>Skills</h2>
+                <h2>Contact Me</h2>
                 <ul>
-                    <li id="main">Data Analysis & Modeling</li>
-                        <ul>
-                            <li>Experience with Python for data analysis and modeling</li>
-                            <li>Can understand and implement the data analysis process</li>
-                            <li>Used exploratory data analysis to quickly understand a complex dataset</li>
-                            <li>Applied modeling techniques to make predictions</li>
-                        </ul>
-                    <li id="main">Database Creation</li>
-                        <ul>
-                            <li>Has used PostgreSQL to design and develop complex database systems</li>
-                        </ul>
-                    <li id="main">Web Design</li>
-                        <ul>
-                            <li>Has programmed relatively advanced web designs using HTML and CSS</li>
-                        </ul>
-                    <li id="main">Spanish</li>
-                        <ul>
-                            <li>Has been learning the language for 7 years</li>
-                            <li>CEFR proficiency level: B2 (Upper Intermediate)</li>
-                        </ul>
+                    <li><b>Mobile Phone:</b> (585) 353-9439</li>
+                    <li><b>Email:</b> <a href="mailto:potterj@washjeff.edu">potterj@washjeff.edu</a></li>
+                    <li><b>Mailing Address:</b> 2390 State Route 21, Canandaigua, NY 14424</li>
                 </ul>
+                
+                <div class="container">
+                    <h3 id="contact">Contact Me</h3>
+                    <form action="https://formspree.io/f/mgvkeadz" method="post">
+                        <div id="input">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+                        <div id="input">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div id="input">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Type your messsage here." required></textarea>
+                        </div>
+                        <button type="submit" id="submit">Submit</button>
+                    </form>
+                </div>
                 
             </section>
             
