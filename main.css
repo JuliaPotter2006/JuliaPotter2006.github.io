@@ -72,3 +72,43 @@ ul {
     font-weight: bold;
     margin-top: 2%;
 }
+
+#external {
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+form {
+    width: 50%;
+    height: 40vh;
+    margin-left: 2vw;
+}
+
+input, textarea {
+    width: 100%;
+}
+
+input {
+    height: 3vh;
+}
+
+textarea {
+    height: 10vh;
+}
+
+input, textarea {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#contact {
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+    margin-left: 1vw;
+}
