@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Home - Becoming Cultured</title>
+        <title>Blog - Julia Potter</title>
         <meta name="description" content="A personal website about Julia Potter.">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="blog.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../main.css">
         
         <!-- This code taken from https://favicon.io/favicon-converter/ -->
         <link rel="apple-touch-icon" sizes="180x180" href="../Icons/apple-touch-icon.png">
@@ -17,21 +17,26 @@
     @media only screen and (max-width: 600px) {
     
     h1 {
-        font-size: max(18px, 8vw); 
+        font-size: max(22px, 10vw); 
         text-align: center;
     }
 
     h2 {
-        font-size: max(18px, 8vw);
+        font-size: max(18px, 9vw);
     }
         
-        h3, #main {
+        h3{
             font-size: max(16px, 6vw);
+        }
+        
+        h3 a {
+            font-size: max(14px, 5vw);
         }
 
     p {
         font-size: max(14px, 4vw);
         margin: 5%;
+        line-height: 2.5vh;
     }
         
         ul {
@@ -47,10 +52,11 @@
         margin-top: 1vh;
         margin-bottom: 1vh;
         padding: 0px;
-        grid-template: 10% auto/100%;
+        grid-template: 10% auto 10%/100%;
         grid-template-areas: 
             "header"
             "body"
+            "socials"
     }
     
             header {
@@ -61,28 +67,53 @@
                 grid-area: header;
                 justify-content: center;
                 align-items: center;
-                border: 4px solid #5c3e2c;
+                border: 4px solid black;
+                grid-area: header;
             }
             
             header h1 {
-                width: 50%;
                 margin-top: 0px;
             }
-        
+
+            nav {
+                background-color: #fdfdfd;
+                display: none;
+            }
+    
+            #socials {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 5%;
+                padding-right: 5%;
+                width: 100%;
+                height: 100%;
+                border: 4px solid black;
+                grid-area: socials;
+            }
+
+            #socials a {
+                width: 15%;
+                height: auto;
+            }
+
+            #socials img {
+                width: 100%;
+                height: auto;
+            }
     section {
-        border: 4px solid #5c3e2c;
+        border: 4px solid black;
         width: 100%;
-        height: 95%;
+        height: 100%;
         margin: auto;
-        margin-top: 5%;
         grid-area: body;
-        padding-bottom: 5%;
     }
         
         section h2 {
             margin: 0px;
             margin-top: 5%;
-            margin-bottom: 5%;
+            margin-bottom: 3%;
             text-align: center;
         }
         
@@ -101,8 +132,8 @@
         hr {
             margin: 5%;
         }
-        
-        /* Taken From https://www.w3schools.com/css/css_dropdowns.asp */
+    
+    /* Taken From https://www.w3schools.com/css/css_dropdowns.asp */
             
             /* Style The Dropdown Button */
             .dropbtn {
@@ -148,32 +179,29 @@
 }
             
     @media only screen and (min-width: 600px) {
-        h1 {
-            font-size: max(4vw, 20px);
-        }
-        
-        h2 {
-            font-size: max(3vw, 18px);
-            margin: 3%;
-            margin-bottom: 2%;
-            margin-left: 2%;
+                h2 {
+                    font-size: max(3vw, 18px);
+                    text-align: center;
                 }
+        
         h3 {
-          font-size: max(2vw, 18px);  
+            font-size: max(2vw, 18px);  
         }
         
-        #main {
-            font-size: max(1.5vw, 16px);
+        h3 a {
+            font-size: max(16px, 1.5vw);
         }
     
                 p {
-                    margin: 3%;
+                    margin: 5%;
                     font-size: max(1.25vw, 12px);
+                    line-height: 4vh;
                 }
                 
         ul, li {
-            font-size: max(1.5vw, 14px);
+            font-size: max(1.25vw, 12px);
             margin: .5%;
+            list-style-image: url(../Images/arrow_small.jpg);
         }
 
         #grid {
@@ -184,26 +212,15 @@
             margin-top: 1vh;
             margin-bottom: 1vh;
             padding: 0px;
-            grid-template: 17vh auto/100%;
+            grid-template: 17vh auto 17vh/100%;
             grid-template-areas: 
-                "header"
+                "nav"
                 "body"
+                "socials"
     }
-            header {
-                background-color: #fdfdfd;
-                display: flex;
-                width: 100%;
-                height: 100%;
-                grid-area: header;
-                justify-content: center;
-                align-items: center;
-                border: 4px solid black;
-            }
-        
-        header h1 {
-            
-        }
-
+        header {
+            display: none;
+    }
         #socials {
                 display: flex;
                 flex-direction: row;
@@ -246,8 +263,12 @@
             margin-bottom: 1vw;
             grid-area: body;
             padding-bottom: 1vw;
-            padding-right: 10%;
     }
+        
+        #skill {
+            margin-top: 2%;
+            font-weight: bold;
+        }
         
         #no-mobile {
             display: inline;
@@ -265,50 +286,6 @@
             margin: 3%;
         }
         
-        /* Taken From https://www.w3schools.com/css/css_dropdowns.asp */
-            
-            /* Style The Dropdown Button */
-            .dropbtn {
-                background-image: url(../Images/menu-icon.png);
-                background-color: transparent;
-                background-size: cover;
-                border: none;
-                width: 6vw;
-                height: 6vw;
-                position: absolute;
-                left: 6vw;
-                top: 3vh;
-              cursor: pointer;
-            }
-
-            /* Dropdown Content (Hidden by Default) */
-            .dropdown-content {
-              display: none;
-              position: absolute;
-                left: 6vw;
-                top: 15vh;
-              background-color: #f9f9f9;
-              min-width: 160px;
-              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-              z-index: 1;
-            }
-
-            /* Links inside the dropdown */
-            .dropdown-content a {
-              color: black;
-              padding: 12px 16px;
-              text-decoration: none;
-              display: block;
-            }
-
-            /* Change color of dropdown links on hover */
-            .dropdown-content a:hover {background-color: #f1f1f1}
-
-            /* Show the dropdown menu on hover */
-            .dropdown:hover .dropdown-content {
-              display: block;
-            }
-        
     }
         </style>
     </head>
@@ -318,30 +295,47 @@
                 <div class="dropdown">
                     <button class="dropbtn"></button>
                     <div class="dropdown-content">
-                        <a href="blog.html">Home</a>
-                        <a href="../index.html">Back to Personal Site</a>
+                        <a href="../index.html">Home</a>
+                        <a href="../Pages/skills.html">Skills</a>
+                        <a href="../Pages/portfolio.html">Portfolio</a>
+                        <a href="../Pages/resume.html">Resume</a>
+                        <a href="../Pages/hobbies.html">Hobbies</a>
+                        <a href="blog.html">Blog</a>
                     </div>
                 </div>
-                <h1><a href="blog.html" style="text-decoration: none; color: black;">Becoming Cultured</a></h1>
+                <h1>Julia Potter</h1>
             </header>
+
+            <nav>
+                <a href="../index.html" class="logo"><h1>Julia Potter</h1></a>
+                <a href="../Pages/skills.html">Skills</a>
+                <a href="../Pages/portfolio.html">Portfolio</a>
+                <a href="../Pages/resume.html">Resume</a>
+                <a href="../Pages/hobbies.html">Hobbies</a>
+                <a href="blog.html" style="display: flex; align-items: center;" target="_blank">Blog</a>
+            </nav>
             
             <section>
-                <h2>Featured Review<div id="no-mobile">(s)</div></h2>
+                <h2>Blog</h2>
+                <h3 style="margin: 2%; margin-top: 1%;">Featured Post</h3>
                     <article id="featured">
-                        <h3><a href="Articles/crime-and-punishment.html">Crime and Punishment</a></h3>
-                        <p>Crime and Punishment is a novel published in 1866 by Russian author Fyodor Dostoyevsky. It follows the story of Rodion Raskolnikov, a troubled former law student at his all-time low. To free himself from poverty, he decides to murder an old pawnbroker and steal all her money and valuables. The novel centers around...</p>
+                        <h3><a href="Articles/three-lessons.html">3 Lessons I've Learned From Writing Web Fiction</a></h3>
+                        <p>This month marks my one-year anniversary of becoming a web fiction writer. It's been a rocky journey, and the fact I've had even a little taste of success is something not to be taken for granted. So, in celebration, I want to share with you three of the most important lessons I've learned on my journey thus far...</p>
                     </article>
                 <hr>
-                <h2>All Reviews</h2>
+                <h3 style="margin: 2%; margin-top: 1%;">All Posts</h3>
                     <ul>
-                        <li><a href="Articles/crime-and-punishment.html">Crime and Punishment</a></li>
+                        <li><a href="Articles/three-lessons.html">3 Lessons I've Learned From Writing Web Fiction</a></li>
                     </ul>
-                <hr>
-                <h2>My Mission</h2>
-                    <p>My name is Julia, and reading is one of my greatest passions. I've loved to read ever since I was three years old; literature is a staple of my life. However, I've recently become disillusioned with the state of modern fiction. In my opinion, there are so many novels being published nowadays that one must dig through piles of mediocrity to find worthwhile literature. Personally, I have not found a genuinely amazing, recently published piece of fiction in several years. At this point, I'm no longer interested in trying.</p>
-                    <p>With no stock in the present and little hope for the future, there's only one place to go- the past. So, I've decided to embark on a journey to read as many classic literature novels as possible and document my progress by writing reviews for each book I read.</p>
-                    <p>It is my mission to become a cultured reader. Won't you come along for the ride?</p>
             </section>
+            
+            <aside id="socials">
+                <a href="https://washjeff.joinhandshake.com/profiles/d6zjng" target="_blank"><img src="../Images/Handshake_avatar_round.png" width="660" height="660" alt="Handshake logo."></a>
+                <a href="https://www.linkedin.com/in/julia-potter-4933201b2" target="_blank"><img src="../Images/linkedin_logo.png" width="500" height="500" alt="LinkedIn logo."></a>
+                <a href="mailto:potterj@washjeff.edu"><img src="../Images/email.png" width="512" height="512" alt="Email logo."></a>
+                <a href="../Pages/contact.html"><img src="../Images/phone_icon.png" width="128" height="128" alt="Phone logo."></a>
+                <a href="../Pages/contact.html"><img src="../Images/message_icon.png" width="128" height="128" alt="Message logo."></a>
+            </aside>
         </div>
     </body>
 </html>
