@@ -154,112 +154,112 @@
             
         @media only screen and (min-width: 600px) {
     
-    h2 {
-        font-size: max(3vw, 18px);
-    }
-    
-    p {
-        margin: 5%;
-        font-size: max(1.25vw, 12px);
-        line-height: 2vw;
-    }
-    
-    #grid {
-        display: grid;
-        width: 100%;
-        height: 100%;
-        margin: 0px;
-        grid-template: 17vh auto 17vh/auto;
-        grid-template-areas: 
-            "nav nav"
-            "about frontpage"
-            "socials socials"
-    }
-
-    header {
-        display: none;
-    }
-
-     #frontpage_rect {
-        grid-area: frontpage;
-        width: 44.5vw;
-        height: auto;
-        aspect-ratio: 3 / 2;
-        border: 3px solid black;
-        margin: auto;
-         margin-top: 1vw;
-         margin-right: 5vw;
-         margin-bottom: 0px;
-         margin-left: .5vw;
-    }
-
-    #frontpage_sq {
-        display: none;
-    }
-
-    #about {
-        grid-area: about;
-        width: 44.5vw;
-        aspect-ratio: 3 / 2;
-        border: 3px solid black;
-        text-align: center;
-        margin: auto;
-        margin-top: 1vw;
-        margin-left: 5vw;
-        margin-right: .5vw;
-        margin-bottom: 0px;
-    }
-            
-    #about p {
-        margin-top: 3vh; 
-        text-align: left;
-    }
-
-    #socials {
-        grid-area: socials;
-        width: 90vw;
-        height: 15vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        border: 3px solid black;
-        margin-right: 5vw;
-        margin-top: 1vw;
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-            
-    #socials button {
-        display: none;
-    }
-    
-            #socials a {
-                width: auto;
-                height: 75%;
+            h2 {
+                font-size: max(3vw, 18px);
             }
-            
-            #socials img {
-                height: 100%;
+    
+            p {
+            margin: 5%;
+            font-size: max(1.25vw, 12px);
+            line-height: 2vw;
+            }
+    
+            #grid {
+                display: grid;
                 width: 100%;
+                height: 100%;
+                margin: 0px;
+                grid-template: 17vh auto 17vh/auto;
+                grid-template-areas: 
+                    "nav nav"
+                    "about frontpage"
+                    "socials socials"
             }
-            
-    nav {
-        grid-area: nav;
-        width: 90vw;
-        height: 15vh;
-        margin: auto;
-        margin-top: 2vh;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-right: 7vw;
-        padding-left: 3vw;
-        border: 3px solid black;
-    }
 
-}
+            header {
+                display: none;
+            }
+
+             #frontpage_rect {
+                grid-area: frontpage;
+                width: 44.5vw;
+                height: auto;
+                aspect-ratio: 3 / 2;
+                border: 3px solid black;
+                margin: auto;
+                 margin-top: 1vw;
+                 margin-right: 5vw;
+                 margin-bottom: 0px;
+                 margin-left: .5vw;
+            }
+
+            #frontpage_sq {
+                display: none;
+            }
+
+            #about {
+                grid-area: about;
+                width: 44.5vw;
+                aspect-ratio: 3 / 2;
+                border: 3px solid black;
+                text-align: center;
+                margin: auto;
+                margin-top: 1vw;
+                margin-left: 5vw;
+                margin-right: .5vw;
+                margin-bottom: 0px;
+            }
+
+            #about p {
+                margin-top: 3vh; 
+                text-align: left;
+            }
+
+            #socials {
+                grid-area: socials;
+                width: 90vw;
+                height: min(15vh, 125px);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: auto;
+                border: 3px solid black;
+                margin-right: 5vw;
+                margin-top: 1vw;
+                padding-left: 10%;
+                padding-right: 10%;
+            }
+
+            #socials button {
+                display: none;
+            }
+
+                    #socials a {
+                        width: auto;
+                        height: 75%;
+                    }
+
+                    #socials img {
+                        height: 100%;
+                        width: 100%;
+                    }
+
+            nav {
+                grid-area: nav;
+                width: 90vw;
+                height: 15vh;
+                margin: auto;
+                margin-top: 2vh;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-right: 7vw;
+                padding-left: 3vw;
+                border: 3px solid black;
+            }
+
+            }
             
         </style>
         
